@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmart | Code</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/fav.png">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body >
+
+<nav id="navbar" class="navbar fixed z-50 w-full bg-transparent border-gray-200 dark:bg-transparent dark:border-gray-700">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="#" class="flex items-center">
+          <img src="assets/img/logo2.png" class="h-8 mr-3" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">XMART | CODE</span>
+      </a>
+      <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+        <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border text-white border-gray-100 rounded-lg bg-transparent md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="#" id="navtxt" class="block px-4 py-2 ">Dashboard</a>
+                    </li>
+                    <li>
+                      <a href="#" id="navtxt" class="block px-4 py-2 ">Settings</a>
+                    </li>
+                    <li>
+                      <a href="#" id="navtxt" class="block px-4 py-2 ">Earnings</a>
+                    </li>
+                  </ul>
+                  <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 bg-PrimaryColor w-full"> -->
+        <div class="relative grid md:grid-cols-2 items-center justify-center  bg-PrimaryColor text-white z-40">
+
+            <div class="m-auto z-40 text-center md:text-start mt-24 md:mt-auto ">
+                <div>
+                    <h3 class="text-3xl lg:text-5xl md:text-3xl font-bold text-gray-300 mb-3 md:mt-24 lg:mt-auto ">HELLO  H E R O</h3>
+                    <h6 class="text-xl sm:text-3xl  font-extralight text-gray-600 mb-3">W  e  l  c  o  m  e  t  o</h6>
+                    <h1 class="text-4xl md:text-5xl xl:text-7xl font-bold">XMART | CODE</h1>
+                    <p class="text-sm sm:text-xl md:text-sm lg:text-xl font-extralight text-gray-600 mt-3">We will bring your dreaming technical project in to reality with 
+                        <br>modern look and modern technology</p>
+                        <br>
+                        <button type="button" class="text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm  sm:text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-900 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition duration-700 ease-in-out">Services</button>
+                        <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm sm:text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 transition duration-700 ease-in-out">Meet us</button>
+                </div>
+            </div>
+            <div class="z-40 ">
+                <img class="w-1/2 m-auto md:w-auto md:m-0 " src="assets/img/x.png" alt="">
+            </div>
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
+                <div class="t-img absolute top-0 left-0">
+                    <img  src="assets/img/Ellipse 2.png" alt="">
+                </div>
+            </div>
+            <!-- <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 "> -->
+                <div class="t-img absolute top-0 right-0">
+                    <img src="assets/img/Ellipse 1.png" alt="">
+                </div>
+
+        </div>
+        
+
+
+        <!-- SECTION 2 -->
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+    <div class="md:mt-12 lg:mt-auto  grid grid-cols-4 items-center justify-center m-auto">
+
+        <div data-aos="fade-up-right" class="cardtop p-3 m-3 bg-PrimaryColor rounded-lg z-40 md:-mt-24  "  data-tooltip-target="tooltip-top" data-tooltip-placement="top" > 
+            <img src="assets/img/Other 03.png" alt="">
+            <h6 class=" font-extralight text-white  text-center hidden md:block">Web Developing</h6>
+        </div>
+        <div id="tooltip-top" role="tooltip" class="absolute z-40 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 ">
+            Web Developing
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+
+        <div data-aos="fade-up-right" class="cardtop p-3 m-3 bg-PrimaryColor rounded-lg z-40   -mt-24  " data-tooltip-target="tooltip-top2" data-tooltip-placement="top">
+            <img src="assets/img/Other 04.png" alt="">
+            <h6 class=" font-extralight text-white  text-center hidden md:block">App Developing</h6>
+        </div>
+        <div id="tooltip-top2" role="tooltip" class="absolute z-40 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 ">
+            App Developing
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+
+        <div data-aos="fade-up-right" class="cardtop p-3 m-3 bg-PrimaryColor rounded-lg z-40 md:-mt-24  " data-tooltip-target="tooltip-top3" data-tooltip-placement="top">
+            <img src="assets/img/Other 07.png" alt="">
+            <h6 class=" font-extralight text-white  text-center hidden md:block">Software Developing</h6>
+        </div>
+        <div id="tooltip-top3" role="tooltip" class="absolute z-40 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 ">
+            Software Developing
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+
+        <div data-aos="fade-up-right" class="cardtop p-3 m-3 bg-PrimaryColor rounded-lg z-40  -mt-24  " data-tooltip-target="tooltip-top4" data-tooltip-placement="top">
+            <img src="assets/img/Other 10.png" alt="">
+            <h6 class=" font-extralight text-white  text-center hidden md:block">UI & UX Designing</h6>
+        </div>
+        <div id="tooltip-top4" role="tooltip" class="absolute z-40 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700 ">
+            UI & UX Developing
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+
+    </div>
+</div>
+<center>
+    <button  data-aos="fade-up" type="button" class="btn bg-PrimaryColor text-white p-5 rounded-lg transition duration-700 ease-in-out m-6">View all Services</button>
+</center>
+
+<!-- SECTION3 -->
+<div class="text-center items-center justify-center align-middle" data-aos="fade-up">
+    <h1 class="m-auto text-PrimaryColor text-2xl mt-16 md:text-5xl font-bold">A  B  O  U  T   U  S</h1>
+    <br>
+    <center>
+     <hr class="bg-PrimaryColor w-1/2 h-1">
+    </center>   
+</div>
+
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="md:flex justify-center ">
+    <div class=" basis-2/5 md:mt-12" data-aos="fade-up">
+    <p>We are a dynamic digital startup company  that specializes in creating innovative solutions for businesses and individuals. We are started company in 2023. Our team of tech enthusiasts is driven by a passion for leveraging cutting-edge technologies to drive growth and success. Through custom software development, web and mobile app development, and digital marketing services, we empower our clients to thrive in the ever-evolving digital landscape. With a customer-centric approach and a commitment to excellence, we are dedicated to delivering high-quality solutions that make a lasting impact. Join us on this exciting journey as we transform the digital world together.</p>
+    <button type="button" class="btn bg-PrimaryColor text-white p-3 rounded-lg transition duration-700 ease-in-out m-6 pl-12 pr-12">Portfolio</button>
+    </div>
+    <div data-aos="fade-down">
+        <img src="assets/img/Other 20.png" alt="">
+    </div>
+</div>
+</div>
+
+<div class="text-center items-center justify-center align-middle" data-aos="fade-up">
+    <h1 class="m-auto text-PrimaryColor text-2xl mt-16 md:text-5xl  font-bold"><span class="text-sm">Our </span>DEVELOPMENT RODE</h1>
+    <br>
+    <center>
+     <hr class="bg-PrimaryColor w-1/2 h-1">
+    </center>   
+</div>
+<center>
+    <img  data-aos="fade-up" class="mt-12 md:w-8/12" src="assets/img/road.png " alt="">
+</center>
+
+<br><br><br><br><br>
+<section class="relative bg-gray-900">
+    <br>
+    <div class="relative z-40 text-center items-center justify-center align-middle" data-aos="fade-up">
+        <h1 class="m-auto text-gray-200 text-4xl mt-16 md:text-5xl  font-bold"><span class="text-sm">Recent </span>Projects</h1>
+        <br>
+        <center>
+         <hr class="bg-gray-400 w-1/2 h-1">
+        </center>   
+    </div>
+    <br><br>
+    <div class="z-40 relative gap-8 items-center  mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 p-3 sm:py-16 lg:px-6 overflow-hidden">
+        <img data-aos="fade-up" class="w-full " src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
+        <div data-aos="fade-up" class="mt-4 md:mt-0">
+            <h2 class="mb-4 text-4xl  font-extrabold text-white">Let's create more tools and ideas that brings us together.</h2>
+            <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+            <a href="#" class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-900">
+                Case study
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+        
+        
+    </div>
+    <div class="z-40 relative gap-8 items-center  mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 p-3 sm:py-16 lg:px-6 overflow-hidden">
+        <img data-aos="fade-up" class="w-full " src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg" alt="dashboard image">
+        <div data-aos="fade-up" class="mt-4 md:mt-0">
+            <h2 class="mb-4 text-4xl  font-extrabold text-white">Let's create more tools and ideas that brings us together.</h2>
+            <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Flowbite helps you connect with friends and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups.</p>
+            <a href="#" class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-900">
+                Case study
+                <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+        
+        
+    </div>
+    <center>
+        <br><br>
+    <a href="#" class="inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:focus:ring-blue-900">
+        View All
+        <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+    </a>
+</center>
+<br><br><br>
+    <div data-aos="fade-up" class="c-img absolute  right-0 z-10">
+        <img class="z-40" src="assets/img/Ellipse 7.png" alt="">
+    </div>
+</section>
+
+<!-- Comments -->
+<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+<div class="grid md:grid-cols-2">
+    <div class="mt-6" >
+        <img data-aos="flip-left" src="assets/img/Group 2.png" alt="">
+    </div>
+    <div>
+        <article data-aos="flip-right" class="commentCard m-10 p-6  text-base bg-white rounded-lg ">
+            <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                    <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img
+                            class="mr-2 w-6 h-6 rounded-full"
+                            src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                            alt="Michael Gough">Michael Gough</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="2022-02-08"
+                            title="February 8th, 2022">Feb. 8, 2022</time></p>
+                </div>
+            </footer>
+            <p class="text-gray-500 dark:text-gray-400">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
+                instruments for the UX designers. The knowledge of the design tools are as important as the
+                creation of the design strategy.</p>
+            
+        </article>
+        <article data-aos="flip-right" class="commentCard m-10 p-6  text-base bg-white rounded-lg ">
+            <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                    <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img
+                            class="mr-2 w-6 h-6 rounded-full"
+                            src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                            alt="Michael Gough">Michael Gough</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="2022-02-08"
+                            title="February 8th, 2022">Feb. 8, 2022</time></p>
+                </div>
+            </footer>
+            <p class="text-gray-500 dark:text-gray-400">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
+                instruments for the UX designers. The knowledge of the design tools are as important as the
+                creation of the design strategy.</p>
+            
+        </article>
+        <article data-aos="flip-right" class="commentCard m-10 p-6  text-base bg-white rounded-lg ">
+            <footer class="flex justify-between items-center mb-2">
+                <div class="flex items-center">
+                    <p class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white"><img
+                            class="mr-2 w-6 h-6 rounded-full"
+                            src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
+                            alt="Michael Gough">Michael Gough</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400"><time pubdate datetime="2022-02-08"
+                            title="February 8th, 2022">Feb. 8, 2022</time></p>
+                </div>
+            </footer>
+            <p class="text-gray-500 dark:text-gray-400">Very straight-to-point article. Really worth time reading. Thank you! But tools are just the
+                instruments for the UX designers. The knowledge of the design tools are as important as the
+                creation of the design strategy.</p>
+            
+        </article>
+    </div>
+</div>
+</div>
+
+<!-- Technology -->
+<br><br><br>
+
+<div class="text-center items-center justify-center align-middle" data-aos="fade-up">
+    <h1 class="m-auto text-PrimaryColor text-2xl mt-16 md:text-5xl  font-bold"><span class="text-sm"> </span>Technologies we use</h1>
+    <br>
+    <center>
+     <hr class="bg-PrimaryColor w-1/2 h-1">
+    </center>   
+</div>
+<br>
+<div class="flex flex-wrap">
+    <img class="techimg" src="assets/img/tech/html-5-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/css-3-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/js-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/php-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/react-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/tailwind-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/angular-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/sass-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/vue-vuejs-javascript-js-framework-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/figma-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/java-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/android-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/flutter-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/python-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/wordpress-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/laravel-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/bootstrap-svgrepo-com.svg" alt="">
+    <img class="techimg" src="assets/img/tech/firebase-svgrepo-com.svg" alt="">
+    
+
+</div>
+<br><br><br>
+
+
+<!-- Contact -->
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+        <form action="#" class="space-y-8">
+            <div>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
+                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+            </div>
+            <div>
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+            </div>
+            <div class="sm:col-span-2">
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
+                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+            </div>
+            <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-700 sm:w-fit hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send message</button>
+        </form>
+    </div>
+  </section>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
+</body>
+</html>
